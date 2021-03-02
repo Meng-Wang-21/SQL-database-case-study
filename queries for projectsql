@@ -1,0 +1,96 @@
+/*Q1 List from highest to lowest about how many  quantities are bought for each product? -Ellie*/
+Select HologicOrderLine_T.ProductID As ProductID,
+       HologicProduct_T.ProductName As ProductName, 
+       HologicOrderLine_T.OrderedQuantity As Quantity 
+From                            
+ (HologicOrderLine_T   
+    Join HologicProduct_T 
+    On HologicOrderLine_T.ProductID = HologicProduct_T.ProductID
+                                                                  )                                                                                         
+Order   By quantity Desc;               
+
+/*Q2 Which customer submits most maintenance requests? -Ellie*/
+Select s.MedicalCenterID, h.CenterName, s.RequestNumber
+From
+(Select *
+   From
+   (Select MedicalCenterID, Count(RequestID) As RequestNumber From HologicRequest_T
+     Group By MedicalCenterID
+     Order By RequestNumber Desc
+    )
+    Where RowNum =1
+) s
+Join 
+HologicMedicalCenter_T h
+On s.MedicalCenterID = h.medicalcenterid;
+
+Select
+Max(RequestNumber)
+From
+(Select  Count(RequestID) As RequestNumber From HologicRequest_T
+Group By MedicalCenterID
+Order By RequestNumber 
+);
+
+/*Q3 Select the medical centers, city and state that has set orders above $200,000, Order by city-Pedro*/
+select distinct Centername, city, medicalcenterstate
+From Hologicmedicalcenter_T
+Join Hologicorder_T on Hologicmedicalcenter_T.medicalcenterID = HologicOrder_T.medicalcenterID
+Where orderfinalprice > 200000
+order by city;
+
+
+
+/*Q4 Which day has the highest revenue and which the least. -Pedro*/
+select orderdate, orderfinalprice
+from hologicorder_T 
+where orderfinalprice = 
+(select max(orderfinalprice)
+from hologicorder_T)
+union
+select orderdate, orderfinalprice
+from hologicorder_T 
+where orderfinalprice = 
+(select min(orderfinalprice)
+from hologicorder_T);
+
+
+
+/*Q5 How many clinical trials are going on for each product type?-Meng*/
+select productType,count(ClinicalTrialID) counttrials1 from Hologicproduct_t
+join Hologicclinicaltrial_t 
+on Hologicclinicaltrial_t.productID=Hologicproduct_t.ProductID
+where trialresult='Not Sure'
+group by productType;
+
+/*Q6 What are the partners' ID who are participating more than one clinical trial?-Meng*/
+drop view counttrials2;
+create view counttrials2 as 
+select partnerid, count(partnerID) PartnerParticipationTime from Hologictrialline_t
+group by partnerID;
+
+select partnerid,PartnerParticipationTime from counttrials2
+where PartnerParticipationTime>1
+;
+
+
+/*Q7 List all products that have a standard price less than $10,000.-Jenny*/
+ SELECT ProductID, ProductDescription,ProductStandardPrice
+ FROM HologicProduct_T
+ WHERE ProductStandardPrice < 10000;
+ 
+/*Q8 Which products in Hologic Product table have a standard price greater than or equal to 
+$100,000 and  have included product description in ‘imaging machine’?-Jenny*/
+SELECT ProductStandardPrice, ProductDescription, ProductName
+FROM HOLOGICPRODUCT_T
+WHERE ProductStandardPrice >= 100000 AND ProductDescription = 'Imaging Machine'
+ORDER BY ProductStandardPrice;
+
+
+
+
+
+
+/*Q9 What are the clinical trials that started at the second half of 2019?*/
+select *  from Hologicclinicaltrial_t
+where startdate>'30-Jun-2019';

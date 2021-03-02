@@ -1,0 +1,552 @@
+drop table HologicProduct_T cascade constraints;
+
+CREATE TABLE HologicProduct_T
+(ProductID     NUMBER(10,0) NOT NULL,
+ProductName        VARCHAR(100) NOT NULL,
+ProductType                VARCHAR(100),
+ProductDescription    VARCHAR(100),
+ProductUnitCost     DECIMAL(8,2),
+ProductStandardPrice     DECIMAL(8,2),
+OnMarketDate    DATE,
+CONSTRAINT Product_PK PRIMARY KEY(ProductID)); 
+
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(401,'Selenia®Dimensions®2D/3DMammography™System','BREASTSKELETAL','MammographyMachine', 300000, 430000,'01/Jan/2016');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(402,'Intelligent 2D™ imaging technology','BREASTSKELETAL','ImagingMachine', 120000, 200000,'02/Jan/2016');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(403,'Clarity HD high-resolution 3D™imaging','BREASTSKELETAL','ImagingMachine', 100000, 150000,'03/Jan/2017');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(404,'SecurView DX Diagnostic Workstation','BREASTSKELETAL','Workstation', 25000, 35000,'04/Jan/2016');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(405,'SecurView RT Technologist Workstation','BREASTSKELETAL','Workstation', 26000, 38000,'05/Jan/2016'); 
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(406,'SecurXchange Router','BREASTSKELETAL','Router', 7000, 15000,'06/Jan/2016');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(407,'SecurXchange Image Storage and Routing Solutions','BREASTSKELETAL','Router', 6000, 12000,'07/Jan/2016');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(408,'SecurXchange Image Storage and VNA Solutions','BREASTSKELETAL','Router', 8000, 14500,'08/Jan/2016'); 
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(409,'Contura® Multi-Lumen Balloon Catheter','BREASTSKELETAL','Catheter', 2000, 3500,'09/Jan/2017');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(411,'Sertera® Breast Biopsy Device','BREASTSKELETAL','Biopsy Device', 1000, 2000,'10/Jan/2017');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(412,'Faxitron™ Core Specimen Radiography System','BREASTSKELETAL','Imaging Machine', 83000, 175000,'11/Jan/2017');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(413,'Viera™ portable breast ultrasound','BREASTSKELETAL','Ultrasound', 60000, 85000,'12/Jan/2017');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(414,'Fluoroscan® InSight™ FD Mini C-arm','BREASTSKELETAL','Imaging Machine', 100000, 230000,'01/Jan/2017');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(415,'Fluoroscan® InSight™ 2 Mini C-arm System','BREASTSKELETAL','Imaging Machine', 80000, 150000,'02/Jan/2018');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(464,'testing_3Dimensions™ Mammography System','BREASTSKELETAL','Mammography Machine');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(465,'testing_BioZorb® 3D Bioabsorbable Marker','BREASTSKELETAL','3D Mrker');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(417,'Aquilex fluid management system','GYN SURGICAL SOLUTIONS','Management Device', 18000, 32000,'01/Feb/2018'); 
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(418,'NovaSure® Endometrial Ablation','GYN SURGICAL SOLUTIONS','Medical Device', 5000, 8000,'06/Jan/2018');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(467,'testing_MyoSure® Tissue Removal Suite','GYN SURGICAL SOLUTIONS','Medical Device');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(468,'testing_NovaSure® Endometrial Ablation','GYN SURGICAL SOLUTIONS','Medical Device');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(461,'testing_Elite+™ Aesthetic Workstation','MEDICAL AESTHETICS PRODUCTS','Medical Workstation');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(462,'testing_Smartlipo® Triplex®','MEDICAL AESTHETICS PRODUCTS','Medical Workstation'); 
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(463,'testing_Icon™','MEDICAL AESTHETICS PRODUCTS','Aesthetics Machine'); 
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(469,'testing_MonaLisa Touch','MEDICAL AESTHETICS PRODUCTS','Laser Machine');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(470,'testing_PicoSure','MEDICAL AESTHETICS PRODUCTS','Laser Machine');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(471,'testing_SculpSure®','MEDICAL AESTHETICS PRODUCTS','Laser Machine');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription, ProductUnitCost, ProductStandardPrice, OnMarketDate)
+VALUES(425,'TempSure Envi','MEDICAL AESTHETICS PRODUCTS','Radiofrequency Device', 590, 1200,'06/Oct/2017');
+INSERT INTO HologicProduct_T (ProductID, ProductName, ProductType, ProductDescription)
+VALUES(466,'testing_Perinatal','DIAGNOSTIC PRODUCTS','fFN Testing Device');
+
+
+
+drop table HologicMedicalCenter_T cascade constraints;
+
+Create Table HologicMedicalCenter_T
+
+(MedicalCenterID CHAR (6) not null, 
+CenterName varchar2 (50), 
+Specialty varchar2 (50),
+Tel number (10),
+Email char (40),
+Address varchar2 (30),
+City varchar2 (25),
+MedicalCenterState char (2),
+MedicalZipCode char (5),
+Constraint MedicalCenterID_PK primary key (MedicalCenterID));
+
+
+insert into hologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('MA8987','MGH', 'Research Hospital',8007114644, 'MGH@gmail.com', '55 Fruit St', 'Boston', 'MA', '02141');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('MA9092', 'Beth Israel', 'Cancer Treatment' , 6177325500, 'bethisrael@gmail.com', '75 Francis St', 'Boston', 'MA', '02115' );
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('TX8988', 'MD Anderson', 'Cancer Treatment', 8776326789, 'Mdander@gmail.com', '1515 Holcombe Blvd', 'Houston', 'TX', '77030');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('NY8989', 'Lenox Hill Hospital', 'Research Hospital', 2124342000, 'Hillhospital@yahoo.com', '100 E 77th St', 'New York', 'NY', '10075');
+insert into hologicmedicalcenter_t (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('NY8990', 'NYC Hospital', 'Cancer Treatment', 2124236262, 'Nychospital@hotmail.com', '1901 1st Avenue', 'New York', 'NY', '10029');
+insert into hologicmedicalcenter_t (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('GA8991', 'Emory Hospital', 'Cancer Treatment', '4046864411', 'Emoryhospital@gmail.com', '550 Peachtree St NE', 'Atlanta', 'GA','30308');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('FL8992', 'Jackson Memorial Hospital', 'Cancer Treatment', 3055851111, 'Jmemorial@yahoo.com', '1611 NW 12th Ave', 'Miami', 'FL', '33136');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('FL8993', 'Lynn Cancer Institute', 'Cancer Treatment', 5619555966, 'Lynninstitute@gmail.com', '701 NW 13th St', 'Boca Raton', 'FL','33486');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('IL8994', 'Northwestern Memorial', 'Research Hospital', 3129622000, 'Northmemorial@yahoo.com', '251 E Hurton St', 'Chicago', 'IL','60611');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('IL8995', 'Chicago Hospital', 'Cancer Treatment', 7737021000, 'Chihospital@hotmail.com', '5758 S Maryland Ave', 'Chicago', 'IL','60637');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('CA8996', 'UCSF Medical Center', 'Cancer Treatment', 4154761000, 'Ucsf@yahoo.com', '505 Parnassus Ave', 'San Francisco', 'CA','94143');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('CA8997', 'Good Samaritan Hospital', 'Cancer Treatment', 2139772121, 'Goodsamaritan@gmail.com', '1225 Wilshire Blvd', 'Los Anegeles', 'CA','90017');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('MI8998', 'Henry Ford Hospital', 'Cancer Treatment', 3139162600, 'fordhospital@gmail.com', '2799 W Grand Blvd', 'Detroit', 'MI', '48202');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('HI8999', 'Queens Medical Center', 'Cancer Treatment', 8086911000, 'Queenmedical@hotmail.com', '1301 Punchbowl St', 'Honolulu', 'HI','96813');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('PA9001', 'Children Hospital', 'General Hospital', 2155901000, 'Childhospital@yahoo.com', '3401 Civic Center Blvd', 'Philadelphia', 'PA', '19104');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('LA9000', 'Tulane Medical Center', 'General Hospital', 5049885263, 'Tulanecenter@gmail.com', '1415 Tulane Ave', 'New Orleans', 'LA','70112');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('AZ9002', 'OASIS Hospital', 'General Hospital', 6027977700, 'Hospitaloasis@gmail.com', '750 N 40th St', 'Phoenix', 'AZ', '85008');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('CO9003', 'University Colorado Hospital', 'General Hospital', 3034366000, 'Coloradohospital@aol.com', '777 Bannock St', 'Denver', 'CO', '80204');
+insert into HologicMedicalCenter_T (MedicalCenterId, CenterName, Specialty, Tel, Email, Address, City, MedicalCenterState, MedicalZipCode) values ('WA9004', 'Virginia Mason Hospital', 'Research Hospital', 2062236600, 'Masonhospital@gmail.com', '925 Seneca St', 'Seattle', 'WA', '98101');
+
+drop table HologicSalesPerson_T cascade constraints;
+
+Create table HologicSalesPerson_T
+
+(SalesPersonID number(10,0) not null,
+FirstName CHAR(15),
+LastName CHAR(20),
+Tel number(10,0),
+Email char(25),
+Address varchar2(30),
+City varchar2(25),
+States Char(2), 
+ZipCode char(5),
+StartDate date, 
+Withdrawdate date,
+constraint SalesPersonId_PK Primary key (SalesPersonID));
+ 
+
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) Values (1065837251,'Adam','Smith',7813634663,'a.smith@hologic.com','10 Museum Way', 'Cambridge','MA','02141','29/August/2016');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (1370563942, 'Charles','Donovan',7458251245,'c.donovan@hologic.com','101 Canal St','Boston','MA','02131','4/April/2015');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (1376946463,'Samuel','Pulisic',6173658374,'s.pulisic@hologic.com','124 S 87th St','New York','NY','10085','1/March/2011');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (1065837254,'Christine', 'Paola',6786365268,'c.paola@hologic.com','98 N 13th St','New York','NY','10054', '1/December/2017');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (1047826475,'Sophia','Robertson',5747399874, 's.robertson@hologic.com','2598 Harrison St','Philadelphia','PA','19106', '15/November/2015');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (2374783622,'Domenick','Christensen',6203743287,'d.christensen@hologic.com','426 Storrow st SE','Atlanta', 'GA','30305','6/July/2019');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (2750365103,'Vanessa', 'Adams',8572950403, 'v.adams@hologic.com','1456 NW 13 Ave', 'Miami','FL','33138','4/June/2018');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (2890317564,'Christopher', 'Bolton',6176690433,'c.bolton@hologic.com','1735 NE 43th St', 'Boca Raton', 'FL','33487','4/August/2016');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (2316450985,'Paul','Recamier', 8577773660, 'p.recamier@hologic.com','234 Nassau St','New Orleans', 'LA', '70115', '15/May/2011');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (3807941562,'Joseph', 'Logan',8572007656, 'j.logan@hologic.com', '243 W Lincon Ave', 'Chicago','IL', '60625', '1/October/2014');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (3256178343,'Peter', 'Manos',8325269950, 'p.manos@hologic.com', '828  N Millenium Ave', 'Chicago', 'IL','60634', '22/March/2017');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (3677749565,'Jessica', 'Soto', 4047910257, 'jessica.soto@hologic.com', '3947 N Starry St', 'Detroit', 'MI', '48223', '1/December/2016');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (4128976321,'Lionel','Evans', 3057803515, 'l.evans@hologic.com', '1908 Columbus Av', 'Houston', 'TX', '77045', '14/November/2010');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate,Withdrawdate ) values (4476090324, 'Aracelly', 'Torres', 6173906066, 'a.torres@hologic.com', '543 N 34th St','Phoenix', 'AZ', '85001', '5/April/2013', '1/September/2019');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (5903216871, 'Miguel', 'Fernandez', 8295209870, 'm.fernandez@hologic.com', '978 Paramount St', 'San Francisco','CA','94140','1/February/2012');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values ( 5308673122, 'Adolph', 'Brown', 9153564007, 'adolph.brown@hologic.com', '1345 Monsanto Blv','Los Angeles', 'CA','90018', '5/January/2019');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate,Withdrawdate ) values (5001864643, 'Jackeline', 'Olarte', 5068305948, 'jac.olarte@hologic.com', '345 Parmenter St', 'Denver', 'CO','80201', '1/July/2014', '30/March/2019');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate) values (5413987355 ,'Fernando' ,'Garcia', 7138588323, 'f.garcia@hologic.com', '1409 St Mary Av', 'Honolulu' ,'HI', '96809' ,'15/June/2018');
+insert into HologicSalesPerson_T (SalesPersonID, FirstName, LastName, Tel, Email, Address, City, States, ZipCode, Startdate,Withdrawdate ) values (5929083236, 'Jennifer' ,'Pedraza' ,8573321147, 'jenn.pedraza@hologic.com', '385 Medina st', 'Seattle' ,'WA' ,'98110', '3/November/2013', '30/August/2019');
+
+drop table HologicOrder_T cascade constraints;
+
+CREATE TABLE HologicOrder_T
+(OrderID                NUMBER(10,0)  NOT NULL,
+ MedicalCenterID        CHAR(6)       NOT NULL,
+ OrderDate              Date,
+ OrderTotalPrice        DECIMAL(8,2),
+ OrderDiscount          DECIMAL(8,2),
+ OrderFinalPrice        DECIMAL(8,2),
+ SalesPersonID          NUMBER(10,0)  NOT NULL,
+CONSTRAINT HologicOrder_PK PRIMARY KEY (OrderID),
+CONSTRAINT HologicOrder_FK1 FOREIGN KEY (MedicalCenterID) REFERENCES HologicMedicalCenter_T(MedicalCenterID),
+CONSTRAINT HologicOrder_FK2 FOREIGN KEY (SalesPersonID) REFERENCES HologicSalesPerson_T(SalesPersonID));
+
+
+INSERT INTO HologicOrder_T  (OrderID, OrderDate, MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865460, '21/Mar/2019',  'MA8987', 860000, 86000, 774000, 1065837251);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate, MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865461, '25/Jun/2019',  'MA9092', 400000, 40000, 360000, 1370563942);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate, MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865462, '27/Jun/2019',  'TX8988', 450000, 45000, 405000, 1376946463);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865463, '30/Jun/2019',  'NY8989', 35000, 3500, 31500, 1065837254);
+INSERT INTO HologicOrder_T (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865464, '20/Jul/2019', 'NY8990',76000,7600,68400, 1047826475);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865465, '30/Jul/2019',  'GA8991', 75000, 7500, 67500, 2374783622);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865466, '29/Aug/2019',  'FL8992', 60000, 6000, 54000, 2750365103);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865467, '15/Sep/2019', 'FL8993', 14500, 1450, 13050, 2890317564);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865468, '20/Sep/2019', 'IL8994', 10500, 1050, 9450, 2316450985);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865469, '01/Oct/2019','IL8995', 20000, 2000, 18000, 3807941562);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865470, '20/Oct/2019',  'CA8996', 175000, 17500, 157500, 3256178343);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865471, '07/Nov/2019',  'CA8997', 170000, 17000, 153000, 3677749565);
+INSERT INTO HologicOrder_T  (OrderID, OrderDate,  MedicalCenterID, OrderTotalPrice, OrderDiscount, OrderFinalPrice, SalesPersonID)
+VALUES (7865472, '08/Nov/2019',  'CA8997', 170000, 17000, 153000, 3677749565);
+
+
+Drop table HologicOrderLine_T cascade constraints;
+     
+CREATE TABLE HologicORDERLINE_T
+(OrderID NUMBER NOT NULL,
+ProductID NUMBER NOT NULL,
+OrderedQuantity NUMBER,
+CONSTRAINT HologicOrderLine_PK PRIMARY KEY (OrderID, ProductID),
+CONSTRAINT HologicOrderLine_FK1 FOREIGN KEY (OrderID) REFERENCES HologicOrder_T(OrderID),
+CONSTRAINT HologicOrderLine_FK2 FOREIGN KEY (ProductID) REFERENCES HologicProduct_T(ProductID));
+
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865460, 401, 2);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865461, 402, 2);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865462, 403, 3);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865463, 404, 1);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865464, 405, 2);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865465, 406, 5);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865466, 407, 5);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865467, 408, 1);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865468, 409, 3);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865469, 411, 10);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865470, 412, 1);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865471, 413, 2);
+INSERT INTO HologicOrderLine_T(OrderID, ProductID, OrderedQuantity)
+VALUES(7865472, 414, 1);
+
+
+
+drop table HologicPayment_T cascade constraints;
+
+Create table HologicPayment_T
+(PaymentID char (12) not null,
+PayDate Date,
+PayMethod varchar2(15),
+PayAmount Decimal (15,2),
+OrderID Number (10,0),
+CONSTRAINT HologicPayment_PK PRIMARY KEY (PaymentID),
+CONSTRAINT HologicPayment_FK FOREIGN KEY (OrderID) REFERENCES HologicOrder_T(OrderID));
+
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-1','01/Jun/2019','Check',774000.00,7865460);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-2','01/Sep/2019','Credit Card',360000.00,7865461);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-3','29/Aug/2019','Check',405000.00,7865462);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-4','31/Jul/2019','Check',31500.00, 7865463);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-5','15/Sep/2019','Debit Card',68400.00,7865464);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-6','26/Sep/2019','Check',67500.00,7865465);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-7','08/Nov/2019','Credit Card',54000.00,7865466);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-8','10/Oct/2019','Credit Card',13050.00, 7865467);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-9','01/Oct/2019','Debit Card',9450.00,7865468);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-10','15/Nov/2019','Check',18000.00,7865469);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-11','02/Dec/2019','Check',157500.00,7865470);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-12','03/Dec/2019','Check',153000.00, 7865471);
+Insert Into HologicPayment_T (PaymentID,PayDate,PayMethod,PayAmount,OrderID) Values ('34RDO567-13','03/Dec/2019','Check',207000.00, 7865472);
+
+Drop Table HologicShipment_T         Cascade Constraints;
+
+Create Table HologicShipment_T
+                     (ShipmentID      VARCHAR(10)                  not null,
+                      CarrierName     Varchar(10),
+    
+                      ShipDate        Date,
+                      Weight          Number(25,0),
+                      OrderID         Number(10,0)                 not null,
+                      ProductID       Number(10,0)                 not null,
+Constraint HologicShipmentT_PK Primary Key (ShipmentID),
+Constraint HologicShipmentT_FK1 Foreign Key (OrderID) References HologicOrder_T (OrderID),
+Constraint HologicShipmentT_FK2 Foreign Key (ProductID) References HologicProduct_T (ProductID));
+
+
+Insert Into HologicShipment_T (ShipmentID, CarrierName, ShipDate, Weight, OrderID, ProductID) Values ('8978XD6810', 'UPS', '23/Mar/2019', 1427, 7865460, 401);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6811', 'FDX',  '27/Jul/2019', 455, 7865461, 402);
+Insert Into HologicShipment_T (ShipmentID, CarrierName, ShipDate, Weight, OrderID, ProductID) Values ('8978XD6812', 'UPS',  '29/Jun/2019', 892, 7865462, 403);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6813', 'UPS',  '30/Jul/2019', 37, 7865463, 404);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6814', 'UPS',  '22/Jul/2019',680, 7865464, 405);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6815', 'UPS',  '30/Jul/2019', 990, 7865465, 406);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6816', 'UPS', '31/Aug/2019', 86, 7865466, 407);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6817', 'UPS',  '17/Sep/2019', 47, 7865467, 408);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6818', 'UPS',  '22/Sep/2019', 361, 7865468, 409);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6819', 'UPS',  '04/Oct/2019', 1544, 7865469, 411);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6820', 'FDX',  '22/Oct/2019', 6799, 7865470, 412);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6821', 'FDX',  '09/Nov/2019',1222, 7865471, 413);
+Insert Into HologicShipment_T (ShipmentID, CarrierName,  ShipDate, Weight, OrderID, ProductID) Values ('8978XD6822', 'FDX',  '16/Nov/2019', 378, 7865472, 414);
+
+
+Drop Table HologicTechSupport_T         Cascade Constraints;
+Create Table HologicTechSupport_T
+                     (TechSupportID      Number(10,0)                 not null,
+                      TechGroup                    Varchar(30),                    
+                      FirstName              Varchar(10),                    
+                      LastName              Varchar(10),                    
+                      Tel                          Varchar(15),                 
+                      Email                      Varchar(25) ,                
+Constraint HologicTechSupportT_PK Primary Key (TechSupportID));
+
+
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) 
+Values (43394138, 'BREASTSKELETAL', 'Johnny', 'Nealon', '617-876-9807', 'j.nealon@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394139, 'BREASTSKELETAL', 'Kendrah', 'Wen', '678-897-1237', 'kendrah_wen@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394140, 'BREASTSKELETAL', 'Chris', 'Wilson', '587-545-9326', 'chrischrisww@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394141, 'GYN SURGICAL SOLUTIONS', 'Mike', 'Berger', '881-578-5668', 'mikeberger@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394142, 'GYN SURGICAL SOLUTIONS', 'Logan', 'Green', '617-986-6751', 'logan331@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394143, 'GYN SURGICAL SOLUTIONS', 'Amos', 'Smith', '224-876-87827', 'amos.s@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394144, 'MEDICAL AESTHETICS PRODUCTS', 'Wayne', 'Jones', '790-878-6545', 'jones.w@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394145, 'MEDICAL AESTHETICS PRODUCTS', 'Jason', 'Davis', '617-363-3249', 'jason_davis@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394146, 'MEDICAL AESTHETICS PRODUCTS', 'Jacob', 'Miller', '865-786-1234', 'jjmiller@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394147, 'MEDICAL AESTHETICS PRODUCTS', 'Eli', 'Moore', '623-875-9253', 'eli_moore@hologic.com');
+Insert Into HologicTechSupport_T (TechSupportID, TechGroup, FirstName, LastName, Tel, Email) Values
+(43394148, 'BREASTSKELETAL', 'Mervin', 'Lee', '617-725-4425', 'mervin.L@hologic.com');
+
+Drop Table HologicRequest_T         Cascade Constraints;
+
+Create Table HologicRequest_T
+(RequestID                 Varchar(25)                not null,  
+
+SubmitDate                 Date                not null,
+MedicalCenterID            CHAR (6)                   not null,
+ProductID                  Number(10，0)              not null,
+Primary Key (RequestID),
+Foreign Key (ProductID) References HologicProduct_T(ProductID),
+Foreign Key (MedicalCenterID) References HologicMedicalCenter_T (MedicalCenterID));
+
+
+Insert Into HologicRequest_T (RequestID, SubmitDate, MedicalCenterID, ProductID) Values
+( 'WX78KS011' ,'01/Mar/2019', 'MA8987',401);
+Insert Into HologicRequest_T (RequestID, SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS012' ,'02/Feb/2019', 'MA8987',402);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS013','14/Feb/2019', 'MA9092',403);
+Insert Into HologicRequest_T (RequestID, SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS014','15/Mar/2019','TX8988',404);
+Insert Into HologicRequest_T (RequestID, SubmitDate, MedicalCenterID, ProductID) Values
+( 'WX78KS015' ,'17/Apr/2019', 'NY8989',405);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS016' ,'18/May/2019', 'NY8990',406);
+Insert Into HologicRequest_T (RequestID, SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS017' ,'17/May/2019', 'GA8991',407);
+Insert Into HologicRequest_T (RequestID, SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS018' , '22/Apr/2019','FL8992',408);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS019' , '27/Jun/2019','FL8993',409);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS020' , '19/May/2019','IL8994',417);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS021' ,'28/Jul/2019', 'IL8995',418);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS022' ,'23/Aug/2019','CA8996',417);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS023' ,'24/Sep/2019', 'MI8998',418);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS024' ,'02/Oct/2019', 'HI8999',404);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS025','04/Oct/2019', 'LA9000',405);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS026' ,'15/Sep/2019', 'PA9001',406);
+Insert Into HologicRequest_T (RequestID, SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS027' ,'14/Nov/2019', 'AZ9002',407);
+Insert Into HologicRequest_T (RequestID, SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS028' , '27/Nov/2019','CO9003',408);
+Insert Into HologicRequest_T (RequestID,  SubmitDate,MedicalCenterID, ProductID) Values
+( 'WX78KS029' , '29/Nov/2019','WA9004',409);
+
+
+Drop Table HologicMaintainHistory_T         Cascade Constraints;
+
+Create Table HologicMaintainHistory_T
+                     (MaintainID            Varchar(15)                    not null,
+                      RequestID             Varchar(25)                    not null,
+                      TechSupportID         Number(10,0)                   not null,
+                      MaintainDate          date,
+                      Status                Varchar(15)                    not null,
+                      MaintainComment       Varchar(25),
+Constraint HologicMaintainHistory_PK Primary Key (MaintainID),
+Constraint HologicMaintainHistory_FK1 Foreign Key (TechSupportID) References HologicTechSupport_T (TechSupportID),
+Constraint HologicMaintainHistory_FK2 Foreign key (RequestID) References HologicRequest_T (RequestID));
+               
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'BR-7879'   , 'WX78KS011', 43394138, '02/Jul/2019', 'Solved',  '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'MED-7880'  , 'WX78KS012', 43394139, '23/May/2019' , 'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'GYN-7881'   , 'WX78KS012', 43394140,'22/May/2019' ,  'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'GYN-7882'   , 'WX78KS012', 43394141, '14/Jul/2019' ,  'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'GYN-7883'   , 'WX78KS014', 43394142, '22/Aug/2019' , 'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'BR-7884'   , 'WX78KS015', 43394143, '12/Apr/2019', 'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'BR-7885' , 'WX78KS017', 43394138 , '07/Jul/2019',  'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'BR-7886' , 'WX78KS017', 43394139, '02/Aug/2019', 'Reschedualed', 'New Appt 2019-08-07');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'GYN-7887' , 'WX78KS018',43394140 , '07/Jul/2019', 'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'GYN-7888', 'WX78KS019', 43394141 , '07/Aug/2019' , 'Solved', '-');
+Insert Into HologicMaintainHistory_T (MaintainID, RequestID, TechSupportID, MaintainDate, Status, MaintainComment) Values
+(  'GYN-7889', 'WX78KS021', 43394142 , '07/Aug/2019' , 'Solved', '-');
+
+drop table HologicRD_T cascade constraints;
+
+create table HologicRD_T 
+(ResearcherID number(4) not null,
+ResearcherName varchar(25) not null,
+Specialty varchar(25) not null,
+Email varchar(30) not null,
+StateName varchar(2) not null,
+City varchar(20) not null,
+Address varchar(20) not null,
+constraint HologicRD_PK Primary key (ResearcherID));
+
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1601,'Michelle Wang',
+'BREASTSKELETAL','Michelle_Wang@hologic.com','MA','Belmont','16 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1602,'Michael Wang',
+'DIAGNOSTIC','Michael_Wang@hologic.com','MA','Boston','17 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1603,'Max Wang',
+'GYN SURGICAL SOLUTIONS','Max_Wang@hologic.com','ME','Portland','18 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1604,'Min Wang',
+'MEDICAL AESTHETICS','Min_Wang@hologic.com','NY','New York','19 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1605,'Log Wang',
+'DIAGNOSTIC','Log_Wang@hologic.com','MA','Allston','20 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1606,'Average Wang',
+'BREASTSKELETAL','Average_Wang@hologic.com','NH','Concord','21 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1607,'Geo Wang',
+'GYN SURGICAL SOLUTIONS','Geo_Wang@hologic.com','CA','Los Angles','22 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1608,'CC Wang',
+'BREASTSKELETAL','CC_Wang@hologic.com','FL','Orlando','23 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1609,'DD Wang',
+'MEDICAL AESTHETICS','DD_Wang@hologic.com','VT','Burlington','24 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1610,'AA Wang',
+'MEDICAL AESTHETICS','AA_Wang@hologic.com','PA','Philadelphia','25 Belmont st');
+insert into HologicRD_T (ResearcherID,ResearcherName,Specialty,Email,StateName,City,Address) values (1611,'EE Wang',
+'MEDICAL AESTHETICS','EE_Wang@hologic.com','CA','San Francisco','26 Belmont st');
+
+
+drop table HologicClinicalTrial_T cascade constraints;
+
+create table HologicClinicalTrial_T
+(ClinicalTrialID number(4,0) not null,
+TrialName varchar(100) not null,
+StartDate date,
+ResearcherID number(4,0) not null,
+ProductID number(10,0) not null,
+TrialResult varchar(10) not null,
+constraint HologicClinicalTrial_PK Primary key (ClinicalTrialID),
+Constraint HologicClinicalTrial_FK1 foreign key (ResearcherID) references HologicRD_T(ResearcherID),
+Constraint HologicClinicalTrial_FK2 foreign key (ProductID) references HologicProduct_T(ProductID)
+);
+
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1801,'Face and leg vein clearance',
+'01/Jan/2019',1609,461,'Pass');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1802,'Lower face and neck',
+'01/Feb/2019',1604,462,'Not Sure');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1803,'Surgical and acne scar treatment',
+'01/Mar/2019',1609,463,'Not Sure');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1804,'Detecting breast cancers',
+'02/Mar/2019',1601,464,'Pass');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1805,'Cosmetic results of BioZorb 3D Bioabsorbable Marker',
+'06/Apr/2019',1608,465,'Pass');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1806,'Preterm birth',
+'26/May/2019',1602,466,'Not Sure');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1807,'Hysteroscopic treatment',
+'04/Sep/2019',1603,467,'Not Sure');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1808,'Menstrual bleeding',
+'31/Aug/2019',1607,468,'Not Sure');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1809,'Deeper penetration into the tissue',
+'08/Sep/2019',1610,469,'Not Sure');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1810,'Remove unwanted tattoos',
+'23/Nov/2019',1611,470,'Not Sure');
+insert into HologicClinicalTrial_T (ClinicalTrialID,TrialName,StartDate,ResearcherID,ProductID,TrialResult) values (1811,'Fat reduction',
+'01/Oct/2019',1610,471,'Not Sure');
+
+
+
+drop table HologicPartner_T cascade constraints;
+/*on delete cascade-all can be deleted , ignore refericial integrity*/
+
+create table HologicPartner_T 
+(PartnerID number(4,0) not null,
+PartnerName varchar(25) not null,
+PartnerTel number(10,0) not null,
+StateName varchar(2) not null,
+City varchar(20) not null,
+Address varchar(20) not null,
+constraint HologicPartner_PK Primary key (PartnerID));
+
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1701,'Hospital One',
+8571111111,'MA','Allston','12 Beach st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1702,'Hospital Two',
+8571111112,'MA','Boston','13 Star st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1703,'Mass General Hospital',
+8571111113,'MA','Boston','14 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1704,'Bentley Clinic',
+8571111114,'MA','Waltham','15 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1705,'Harvard Clinic',
+8571111115,'MA','Cambridge','16 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1706,'Emerson Hospital',
+8571111116,'MA','Concord','17 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1707,'Acton Medical Associate',
+8571111117,'MA','Acton','18 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1708,'Hospital Five',
+8571111118,'MA','Chelmsford','19 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1709,'Hospital Six',
+8571111119,'MA','Maynard','20 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1710,'MetroWest Medical Center',
+8571111120,'MA','Framingham','21 Moon st');
+insert into HologicPartner_T (PartnerID,PartnerName,PartnerTel,StateName,City,Address) values (1711,'Hospital Eight',
+8571111121,'CA','Los Angles','22 Moon st');
+
+
+Drop Table HologicTrialLine_T         Cascade Constraints;
+
+create table HologicTrialLine_T 
+(ClinicalTrialID number(4,0) not null,
+PartnerID number(4,0) not null,
+Status varchar(10) not null,
+constraint HologicTrialLine_PK Primary key (ClinicalTrialID,PartnerID),
+Constraint HologicTrialLine_FK1 foreign key (ClinicalTrialID) references HologicClinicalTrial_T(ClinicalTrialID),
+Constraint HologicTrialLine_FK2 foreign key (PartnerID) references HologicPartner_T(PartnerID)
+);
+
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1801,1702,'Phase I');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1802,1703,'Phase II');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1803,1704,'Phase III');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1804,1705,'Phase I');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1805,1706,'Phase II');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1806,1707,'Phase III');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1807,1708,'Phase I');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1808,1702,'Phase II');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1809,1703,'Phase III');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1810,1704,'Phase IV');
+insert into HologicTrialLine_T (ClinicalTrialID,PartnerID,Status) values (1811,1705,'Phase IV');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
